@@ -1,0 +1,10 @@
+insert into persons(firstname, lastname) values('Jan', 'Janssen');
+insert into persons(firstname, lastname) values('Piet', 'Pietersen');
+insert into persons(firstname, lastname) values('Kees', 'Klaassen');
+insert into persons(firstname, lastname) values('Kees', 'Klaassen');
+insert into persons(firstname, lastname) values('Kees', 'Klaassen');
+insert into persons(firstname, lastname) values('Kees', 'Klaassen');
+insert into persons(firstname, lastname) values('Kees', 'Klaassen');
+insert into persons(firstname, lastname) values('Kees', 'Klaassen');
+insert into persons(firstname, lastname) values('Kees', 'Klaassen');
+insert into persons(firstname, lastname) values('Jan', 'Janssen');

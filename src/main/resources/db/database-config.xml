@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <typeAliases>
+        <typeAlias type="nl.capaxit.mybatisexamples.domain.Person" alias="person"/>
+    </typeAliases>
+    <typeHandlers>
+    </typeHandlers>
+    <plugins>
+        <plugin interceptor="nl.capaxit.mybatisexamples.dynamicfetchsize.MyInterceptor"></plugin>
+    </plugins>
+    <environments default="prod">
+        <environment id="prod">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="org.h2.Driver"/>
+                <property name="url" value="jdbc:h2:mem:test;MODE=PostgreSQL;AUTOCOMMIT=ON"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <mapper resource="db/mapper/person-mapper.xml"/>
+    </mappers>
+</configuration>
