@@ -5,9 +5,12 @@
 <configuration>
     <typeAliases>
         <typeAlias type="nl.capaxit.mybatisexamples.domain.Person" alias="person"/>
+        <typeAlias type="nl.capaxit.mybatisexamples.domain.Document" alias="document"/>
     </typeAliases>
     <typeHandlers>
     </typeHandlers>
+    <objectFactory type="nl.capaxit.mybatisexamples.objectfactory.DocumentObjectFactory">
+    </objectFactory>
     <plugins>
         <plugin interceptor="nl.capaxit.mybatisexamples.dynamicfetchsize.MyInterceptor"></plugin>
     </plugins>
@@ -22,5 +25,6 @@
     </environments>
     <mappers>
         <mapper resource="db/mapper/person-mapper.xml"/>
+        <mapper resource="db/mapper/document-mapper.xml"/>
     </mappers>
 </configuration>

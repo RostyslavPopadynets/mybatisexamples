@@ -1,8 +1,9 @@
-CREATE TABLE persons(
-  id bigint auto_increment,
+CREATE TABLE persons (
+  id        BIGINT AUTO_INCREMENT,
   firstname VARCHAR,
-  lastname VARCHAR
+  lastname  VARCHAR
 );
-
-
-select * from persons;
+CREATE TABLE documents (
+  id   BIGINT AUTO_INCREMENT,
+  json VARCHAR
+);
