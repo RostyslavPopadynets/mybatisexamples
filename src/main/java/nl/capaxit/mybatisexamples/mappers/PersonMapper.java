@@ -10,4 +10,6 @@ import java.util.List;
  */
 public interface PersonMapper {
     List<Person> retrieveAll(@Param("fetchSize") int fetchSize);
+
+    List<Person> retrieveAllIncludingAddresses();
 }

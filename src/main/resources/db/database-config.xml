@@ -6,6 +6,7 @@
     <typeAliases>
         <typeAlias type="nl.capaxit.mybatisexamples.domain.Person" alias="person"/>
         <typeAlias type="nl.capaxit.mybatisexamples.domain.Document" alias="document"/>
+        <typeAlias type="nl.capaxit.mybatisexamples.domain.Address" alias="address"/>
     </typeAliases>
     <typeHandlers>
     </typeHandlers>

@@ -13,4 +13,25 @@
             lastname
         FROM persons;
     </select>
+    <resultMap id="personFullResultMap" type="person">
+        <id column="person_id" property="id"/>
+        <result column="person_firstname" property="firstName"/>
+        <result column="person_lastname" property="lastName"/>
+        <collection property="addresses" foreignColumn="person_id" column="address_id" javaType="address">
+            <id column="address_id" property="id"/>
+            <result column="address_street" property="street"/>
+            <result column="address_city" property="city"/>
+        </collection>
+    </resultMap>
+    <select id="retrieveAllIncludingAddresses" resultMap="personFullResultMap">
+        SELECT
+            p.id        AS person_id,
+            p.firstname AS person_firstname,
+            p.lastname  AS person_lastname,
+            a.id        AS address_id,
+            a.street    AS address_street,
+            a.city      AS address_city
+        FROM persons p
+            LEFT JOIN addresses a ON p.id = a.person_id
+    </select>
 </mapper>
