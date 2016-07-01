@@ -25,13 +25,30 @@
     </resultMap>
     <select id="retrieveAllIncludingAddresses" resultMap="personFullResultMap">
         SELECT
-            p.id        AS person_id,
-            p.firstname AS person_firstname,
-            p.lastname  AS person_lastname,
-            a.id        AS address_id,
-            a.street    AS address_street,
-            a.city      AS address_city
+            <include refid="personAndAddressColumns"/>
         FROM persons p
             LEFT JOIN addresses a ON p.id = a.person_id
     </select>
+    <select id="find" resultMap="personFullResultMap">
+        SELECT
+        <include refid="personAndAddressColumns"/>
+        FROM persons p
+        LEFT JOIN addresses a ON p.id = a.person_id
+        <where>
+            <if test="searchSpec.firstName != null">
+                AND p.firstName = #{searchSpec.firstName}
+            </if>
+            <if test="searchSpec.lastName != null">
+                AND p.lastName = #{searchSpec.lastName}
+            </if>
+        </where>
+    </select>
+    <sql id="personAndAddressColumns">
+        p.id        AS person_id,
+        p.firstname AS person_firstname,
+        p.lastname  AS person_lastname,
+        a.id        AS address_id,
+        a.street    AS address_street,
+        a.city      AS address_city
+    </sql>
 </mapper>

@@ -1,6 +1,7 @@
 package nl.capaxit.mybatisexamples.mappers;
 
 import nl.capaxit.mybatisexamples.domain.Person;
+import nl.capaxit.mybatisexamples.dynamic.SearchSpec;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -12,4 +13,6 @@ public interface PersonMapper {
     List<Person> retrieveAll(@Param("fetchSize") int fetchSize);
 
     List<Person> retrieveAllIncludingAddresses();
+
+    List<Person> find(@Param("searchSpec") SearchSpec searchSpec);
 }
