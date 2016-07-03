@@ -11,4 +11,5 @@ INSERT INTO persons (id, firstname, lastname) VALUES (10, 'Jan', 'Pietersen');
 INSERT INTO addresses (id, street, city, person_id) VALUES (1, 'Kerkstraat', 'Amsterdam', 1);
 INSERT INTO addresses (id, street, city, person_id) VALUES (2, 'Amsteleind', 'Amsterdam', 1);
 INSERT INTO addresses (id, street, city, person_id) VALUES (3, 'Kerkstraat', 'Oss', 1);
-
+INSERT INTO products (id, name, type, actor, artist) VALUES (1, 'All music', 'CD', '', 'Josh');
+INSERT INTO products (id, name, type, actor, artist) VALUES (2, 'Terminator', 'DVD', 'Arnold', '');

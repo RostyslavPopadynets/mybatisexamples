@@ -7,6 +7,7 @@
         <typeAlias type="nl.capaxit.mybatisexamples.domain.Person" alias="person"/>
         <typeAlias type="nl.capaxit.mybatisexamples.domain.Document" alias="document"/>
         <typeAlias type="nl.capaxit.mybatisexamples.domain.Address" alias="address"/>
+        <typeAlias type="nl.capaxit.mybatisexamples.domain.Product" alias="product"/>
     </typeAliases>
     <typeHandlers>
     </typeHandlers>
@@ -27,5 +28,6 @@
     <mappers>
         <mapper resource="db/mapper/person-mapper.xml"/>
         <mapper resource="db/mapper/document-mapper.xml"/>
+        <mapper resource="db/mapper/product-mapper.xml"/>
     </mappers>
 </configuration>

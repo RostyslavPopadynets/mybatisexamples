@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?><!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="nl.capaxit.mybatisexamples.mappers.ProductMapper">
+    <resultMap id="cdResultMap" type="nl.capaxit.mybatisexamples.domain.Cd" extends="productResultMap"/>
+    <resultMap id="dvdResultMap" type="nl.capaxit.mybatisexamples.domain.Dvd" extends="productResultMap"/>
+    <resultMap id="productResultMap" type="product">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <discriminator javaType="nl.capaxit.mybatisexamples.domain.Product$Type" column="type">
+            <case value="CD" resultMap="cdResultMap"/>
+            <case value="DVD" resultMap="dvdResultMap"/>
+        </discriminator>
+    </resultMap>
+    <select id="retrieveAll" resultMap="productResultMap">
+        SELECT
+            p.id,
+            p.name,
+            p.type,
+            p.actor,
+            p.artist
+        FROM products p;
+    </select>
+</mapper>
