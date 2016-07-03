@@ -6,7 +6,7 @@
         <result column="firstname" property="firstName"/>
         <result column="lastname" property="lastName"/>
     </resultMap>
-    <select id="retrieveAllPersons" resultMap="personResultMap">
+    <select id="retrieveAllPersons" resultMap="personResultMap" fetchSize="100">
         SELECT
             id,
             firstname,
