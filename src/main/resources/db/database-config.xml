@@ -8,8 +8,10 @@
         <typeAlias type="nl.capaxit.mybatisexamples.domain.Document" alias="document"/>
         <typeAlias type="nl.capaxit.mybatisexamples.domain.Address" alias="address"/>
         <typeAlias type="nl.capaxit.mybatisexamples.domain.Product" alias="product"/>
+        <typeAlias type="nl.capaxit.mybatisexamples.domain.Custom" alias="custom"/>
     </typeAliases>
     <typeHandlers>
+        <typeHandler handler="nl.capaxit.mybatisexamples.typehandler.ValueTypeHandler" javaType="Boolean"/>
     </typeHandlers>
     <objectFactory type="nl.capaxit.mybatisexamples.objectfactory.DocumentObjectFactory">
     </objectFactory>
@@ -29,5 +31,6 @@
         <mapper resource="db/mapper/person-mapper.xml"/>
         <mapper resource="db/mapper/document-mapper.xml"/>
         <mapper resource="db/mapper/product-mapper.xml"/>
+        <mapper resource="db/mapper/custom-mapper.xml"/>
     </mappers>
 </configuration>

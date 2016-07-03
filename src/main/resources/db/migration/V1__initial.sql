@@ -20,3 +20,7 @@ CREATE TABLE products (
   actor  VARCHAR,
   artist VARCHAR
 );
+CREATE TABLE custom (
+  id    BIGINT AUTO_INCREMENT PRIMARY KEY,
+  value VARCHAR
+);

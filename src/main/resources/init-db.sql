@@ -13,3 +13,5 @@ INSERT INTO addresses (id, street, city, person_id) VALUES (2, 'Amsteleind', 'Am
 INSERT INTO addresses (id, street, city, person_id) VALUES (3, 'Kerkstraat', 'Oss', 1);
 INSERT INTO products (id, name, type, actor, artist) VALUES (1, 'All music', 'CD', '', 'Josh');
 INSERT INTO products (id, name, type, actor, artist) VALUES (2, 'Terminator', 'DVD', 'Arnold', '');
+INSERT INTO custom (id, value) VALUES (1, 'yes');
+INSERT INTO custom (id, value) VALUES (2, 'no');
