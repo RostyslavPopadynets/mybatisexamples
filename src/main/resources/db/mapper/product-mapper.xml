@@ -12,11 +12,7 @@
     </resultMap>
     <select id="retrieveAll" resultMap="productResultMap">
         SELECT
-            p.id,
-            p.name,
-            p.type,
-            p.actor,
-            p.artist
+            p.id, p.name, p.type, p.actor, p.artist
         FROM products p;
     </select>
 </mapper>
