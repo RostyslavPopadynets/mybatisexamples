@@ -4,19 +4,19 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <typeAliases>
-        <typeAlias type="nl.capaxit.mybatisexamples.domain.Person" alias="person"/>
-        <typeAlias type="nl.capaxit.mybatisexamples.domain.Document" alias="document"/>
-        <typeAlias type="nl.capaxit.mybatisexamples.domain.Address" alias="address"/>
-        <typeAlias type="nl.capaxit.mybatisexamples.domain.Product" alias="product"/>
-        <typeAlias type="nl.capaxit.mybatisexamples.domain.Custom" alias="custom"/>
+        <typeAlias type="nl.capaxit.mybatisexamples.common.domain.Person" alias="person"/>
+        <typeAlias type="nl.capaxit.mybatisexamples.common.domain.Document" alias="document"/>
+        <typeAlias type="nl.capaxit.mybatisexamples.common.domain.Address" alias="address"/>
+        <typeAlias type="nl.capaxit.mybatisexamples.common.domain.Product" alias="product"/>
+        <typeAlias type="nl.capaxit.mybatisexamples.common.domain.Custom" alias="custom"/>
     </typeAliases>
     <typeHandlers>
-        <typeHandler handler="nl.capaxit.mybatisexamples.typehandler.ValueTypeHandler" javaType="Boolean"/>
+        <typeHandler handler="nl.capaxit.mybatisexamples.demos.typehandler.ValueTypeHandler" javaType="Boolean"/>
     </typeHandlers>
-    <objectFactory type="nl.capaxit.mybatisexamples.objectfactory.DocumentObjectFactory">
+    <objectFactory type="nl.capaxit.mybatisexamples.demos.objectfactory.DocumentObjectFactory">
     </objectFactory>
     <plugins>
-        <plugin interceptor="nl.capaxit.mybatisexamples.dynamicfetchsize.MyInterceptor"></plugin>
+        <plugin interceptor="nl.capaxit.mybatisexamples.demos.dynamicfetchsize.MyInterceptor"></plugin>
     </plugins>
     <environments default="prod">
         <environment id="prod">

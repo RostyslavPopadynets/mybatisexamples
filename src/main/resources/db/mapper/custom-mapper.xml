@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?><!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="nl.capaxit.mybatisexamples.mappers.CustomMapper">
+<mapper namespace="nl.capaxit.mybatisexamples.common.mappers.CustomMapper">
     <resultMap id="customResultMap" type="custom">
         <id column="id" property="id"/>
-        <result column="value" property="value" typeHandler="nl.capaxit.mybatisexamples.typehandler.ValueTypeHandler"/>
+        <result column="value" property="value" typeHandler="nl.capaxit.mybatisexamples.demos.typehandler.ValueTypeHandler"/>
     </resultMap>
     <select id="retrieveAll" resultMap="customResultMap">
         SELECT id, value FROM custom
