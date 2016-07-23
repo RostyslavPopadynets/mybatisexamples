@@ -1,5 +1,6 @@
 package nl.capaxit.mybatisexamples.common.mappers;
 
+import nl.capaxit.mybatisexamples.common.domain.Address;
 import nl.capaxit.mybatisexamples.common.domain.Person;
 import nl.capaxit.mybatisexamples.demos.dynamic.SearchSpec;
 import org.apache.ibatis.annotations.Param;
@@ -18,4 +19,8 @@ public interface PersonMapper {
     List<Person> retrieveAllIncludingAddresses();
 
     List<Person> find(@Param("searchSpec") SearchSpec searchSpec);
+
+    void insert(@Param("person") Person person);
+
+    void insertAddress(@Param("address") Address address, @Param("personId") Long personId);
 }

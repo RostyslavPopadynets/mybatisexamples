@@ -1,5 +1,7 @@
 package nl.capaxit.mybatisexamples.common.domain;
 
+import java.util.Objects;
+
 /**
  * Created by jamiecraane on 30/06/16.
  */
@@ -30,6 +32,21 @@ public class Address {
 
     public void setCity(final String city) {
         this.city = city;
+    }
+
+    @Override
+    public boolean equals(final Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        final Address address = (Address) o;
+        return Objects.equals(id, address.id) &&
+                Objects.equals(street, address.street) &&
+                Objects.equals(city, address.city);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, street, city);
     }
 
     @Override

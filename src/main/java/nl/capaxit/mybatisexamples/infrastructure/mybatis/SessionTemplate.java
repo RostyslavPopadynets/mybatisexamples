@@ -28,5 +28,4 @@ public class SessionTemplate {
             session.close();
         }
     }
-
 }

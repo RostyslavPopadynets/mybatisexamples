@@ -51,4 +51,10 @@
         a.street    AS address_street,
         a.city      AS address_city
     </sql>
+    <insert id="insert" useGeneratedKeys="true" keyProperty="person.id" keyColumn="id">
+        insert into persons(firstname, lastname) VALUES(#{person.firstName}, #{person.lastName})
+    </insert>
+    <insert id="insertAddress" useGeneratedKeys="true" keyProperty="address.id" keyColumn="id">
+        insert into addresses(city, street, person_id) VALUES(#{address.street}, #{address.city}, #{personId})
+    </insert>
 </mapper>
