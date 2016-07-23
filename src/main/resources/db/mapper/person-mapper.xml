@@ -57,4 +57,8 @@
     <insert id="insertAddress" useGeneratedKeys="true" keyProperty="address.id" keyColumn="id">
         insert into addresses(city, street, person_id) VALUES(#{address.street}, #{address.city}, #{personId})
     </insert>
+    <delete id="delete">
+        delete from persons
+        where id = #{personId}
+    </delete>
 </mapper>

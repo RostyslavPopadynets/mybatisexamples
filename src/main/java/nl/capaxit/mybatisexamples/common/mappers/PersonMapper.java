@@ -23,4 +23,6 @@ public interface PersonMapper {
     void insert(@Param("person") Person person);
 
     void insertAddress(@Param("address") Address address, @Param("personId") Long personId);
+
+    void delete(@Param("personId") Long id);
 }

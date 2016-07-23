@@ -34,6 +34,8 @@ public class DataInsertionTest {
 
         final List<Person> persons = SessionTemplate.execute(session -> session.getMapper(PersonMapper.class).retrieveAllIncludingAddresses());
         System.out.println("persons = " + persons);
+
+//        todo delete with cascade
     }
 
     private Address getAddress(final String city, final String street) {
