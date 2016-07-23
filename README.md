@@ -5,3 +5,6 @@ Exmples for using the MyBatis persistence framework. The following examples are 
 # ObjectFactory
 # Inheritance
 # ResultHandler
+# Data insertion with related objects
+# Deletion of data
+# TypeHandlers
