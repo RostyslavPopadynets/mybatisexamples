@@ -23,6 +23,13 @@
             <result column="address_city" property="city"/>
         </collection>
     </resultMap>
+    <select id="selectById" resultMap="personFullResultMap">
+        SELECT
+          <include refid="personAndAddressColumns"/>
+        FROM persons p
+            LEFT JOIN addresses a ON p.id = a.person_id
+        WHERE p.id = #{id}
+    </select>
     <select id="retrieveAllIncludingAddresses" resultMap="personFullResultMap">
         SELECT
             <include refid="personAndAddressColumns"/>
@@ -59,6 +66,6 @@
     </insert>
     <delete id="delete">
         delete from persons
-        where id = #{personId}
+        where id = #{id}
     </delete>
 </mapper>
