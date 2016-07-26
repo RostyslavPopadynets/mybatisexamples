@@ -15,6 +15,7 @@ dependencies {
     compile 'org.mybatis:mybatis:3.3.0'
     compile "org.flywaydb:flyway-core:4.0"
     compile 'com.h2database:h2:1.4.191'
+    compile 'postgresql:postgresql:9.0-801.jdbc4'
     compile "com.google.code.gson:gson:2.5"
 
     compile "org.slf4j:jcl-over-slf4j:$slf4jVersion"

@@ -26,6 +26,17 @@
                 <property name="url" value="jdbc:h2:mem:test;MODE=PostgreSQL;AUTOCOMMIT=ON"/>
             </dataSource>
         </environment>
+<!--
+        <environment id="prod">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="org.postgresql.Driver"/>
+                <property name="url" value="jdbc:postgresql://localhost:5432/mybatis_examples"/>
+                <property name="username" value="mybatis_examples"/>
+                <property name="password" value=""/>
+            </dataSource>
+        </environment>
+-->
     </environments>
     <mappers>
         <mapper resource="db/mapper/person-mapper.xml"/>
