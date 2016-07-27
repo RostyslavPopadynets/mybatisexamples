@@ -13,10 +13,9 @@
     <typeHandlers>
         <typeHandler handler="nl.capaxit.mybatisexamples.demos.typehandler.ValueTypeHandler" javaType="Boolean"/>
     </typeHandlers>
-    <objectFactory type="nl.capaxit.mybatisexamples.demos.objectfactory.DocumentObjectFactory">
-    </objectFactory>
+    <objectFactory type="nl.capaxit.mybatisexamples.demos.objectfactory.DocumentObjectFactory"/>
     <plugins>
-        <plugin interceptor="nl.capaxit.mybatisexamples.demos.dynamicfetchsize.MyInterceptor"></plugin>
+        <plugin interceptor="nl.capaxit.mybatisexamples.demos.dynamicfetchsize.MyInterceptor"/>
     </plugins>
     <environments default="prod">
         <environment id="prod">
