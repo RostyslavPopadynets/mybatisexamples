@@ -24,7 +24,8 @@ public class DocumentObjectFactory extends DefaultObjectFactory {
 
     private <T> T createDocument(final List<Object> ctorArgs) {
         final Document document = GSON.fromJson((String) ctorArgs.get(0), Document.class);
-        document.setId((Long) ctorArgs.get(1));
+        final Integer id = (Integer) ctorArgs.get(1);
+        document.setId(id.longValue());
         return (T) document;
     }
 }
